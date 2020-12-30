@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>Form</h2>
+<form id="form" action="/divorce" method="POST">
+    <h3>Spouse 1</h3>
+        {{ form.csrf_token }}
+        {{ form.full_name_1.label }} {{ form.full_name_1 }} <br/>
+        {{ form.address_1.label }} {{ form.address_1 }} <br/>
+        {{ form.date_of_res_1.label }} {{ form.date_of_res_1 }} <br/>
+        {{ form.age_1.label }} {{ form.age_1 }} <br/>
+        {{ form.date_of_birth_1.label }} {{ form.date_of_birth_1 }} <br/>
+        {{ form.place_of_birth_1.label }} {{ form.place_of_birth_1 }} <br/>
+        {{ form.sex_1.label }} {{ form.sex_1 }} <br/>
+        {{ form.status_1.label }} {{ form.status_1 }} <br/>
+        {{ form.parent_1_1.label }} {{ form.parent_1_1 }} <br/>
+        {{ form.parent_2_1.label }} {{ form.parent_2_1 }} <br/>
+
+    <h3>Spouse 2</h3>
+        {{ form.full_name_2.label }} {{ form.full_name_2 }} <br/>
+        {{ form.address_2.label }} {{ form.address_2 }} <br/>
+        {{ form.date_of_res_2.label }} {{ form.date_of_res_2 }} <br/>
+        {{ form.age_2.label }} {{ form.age_2 }} <br/>
+        {{ form.date_of_birth_2.label }} {{ form.date_of_birth_2 }} <br/>
+        {{ form.place_of_birth_2.label }} {{ form.place_of_birth_2 }} <br/>
+        {{ form.sex_2.label }} {{ form.sex_2 }} <br/>
+        {{ form.status_2.label }} {{ form.status_2 }} > <br/>
+        {{ form.parent_1_2.label }} {{ form.parent_1_2 }} <br/>
+        {{ form.parent_2_2.label }} {{ form.parent_2_2 }} <br/>
+
+    <h3>Additional Information</h3>
+        {{ form.marriage_date.label }} {{ form.marriage_date }} <br/>
+        {{ form.marriage_location.label }} {{ form.marriage_location }} <br/>
+        {{ form.attorney.label }} {{ form.attorney }} <br/>
+        {{ form.submit }}
+    </form>
+{% endblock body %}

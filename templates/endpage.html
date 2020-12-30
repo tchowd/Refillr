@@ -1,0 +1,325 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="container">
+    <div class="column-left">
+    <table border="1px">
+        <tr>
+            <th colspan="2">Spouse 1</th>
+        </tr>
+        <tr>
+            <th>Full Name</th>
+            <td>{{ full_name_1 }}</td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{ address_1 }}</td>
+        </tr>
+        <tr>
+            <th>Since</th>
+            {% if date_of_res_1[3:5] == '01' %}
+            <td>Jan {{ date_of_res_1[:2] }}, {{ date_of_res_1[6:]}}</td>
+            {% elif date_of_res_1[3:5] == '02' %}
+            <td>Feb {{ date_of_res_1[:2] }}, {{ date_of_res_1[6:]}}</td>
+            {% elif date_of_res_1[3:5] == '03' %}
+            <td>Mar {{ date_of_res_1[:2] }}, {{ date_of_res_1[6:]}}</td>
+            {% elif date_of_res_1[3:5] == '04' %}
+            <td>Apr {{ date_of_res_1[:2] }}, {{ date_of_res_1[6:]}}</td>
+            {% elif date_of_res_1[3:5] == '05' %}
+            <td>May {{ date_of_res_1[:2] }}, {{ date_of_res_1[6:]}}</td>
+            {% elif date_of_res_1[3:5] == '06' %}
+            <td>Jun {{ date_of_res_1[:2] }}, {{ date_of_res_1[6:]}}</td>
+            {% elif date_of_res_1[3:5] == '07' %}
+            <td>Jul {{ date_of_res_1[:2] }}, {{ date_of_res_1[6:]}}</td>
+            {% elif date_of_res_1[3:5] == '08' %}
+            <td>Aug {{ date_of_res_1[:2] }}, {{ date_of_res_1[6:]}}</td>
+            {% elif date_of_res_1[3:5] == '09' %}
+            <td>Sep {{ date_of_res_1[:2] }}, {{ date_of_res_1[6:]}}</td>
+            {% elif date_of_res_1[3:5] == '10' %}
+            <td>Oct {{ date_of_res_1[:2] }}, {{ date_of_res_1[6:]}}</td>
+            {% elif date_of_res_1[3:5] == '11' %}
+            <td>Nov {{ date_of_res_1[:2] }}, {{ date_of_res_1[6:]}}</td>
+            {% elif date_of_res_1[3:5] == '12' %}
+            <td>Dec {{ date_of_res_1[:2] }}, {{ date_of_res_1[6:]}}</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td>{{ age_1 }}</td>
+        </tr>
+        <tr>
+            <th>Date of Birth</th>
+            {% if date_of_birth_1[3:5] == '01' %}
+            <td>Jan {{ date_of_birth_1[:2] }}, {{ date_of_birth_1[6:] }}</td>
+            {% elif date_of_birth_1[3:5] == '02' %}
+            <td>Feb {{ date_of_birth_1[:2] }}, {{ date_of_birth_1[6:]}}</td>
+            {% elif date_of_birth_1[3:5] == '03' %}
+            <td>Mar {{ date_of_birth_1[:2] }}, {{ date_of_birth_1[6:]}}</td>
+            {% elif date_of_birth_1[3:5] == '04' %}
+            <td>Apr {{ date_of_birth_1[:2] }}, {{ date_of_birth_1[6:]}}</td>
+            {% elif date_of_birth_1[3:5] == '05' %}
+            <td>May {{ date_of_birth_1[:2] }}, {{ date_of_birth_1[6:]}}</td>
+            {% elif date_of_birth_1[3:5] == '06' %}
+            <td>Jun {{ date_of_birth_1[:2] }}, {{ date_of_birth_1[6:]}}</td>
+            {% elif date_of_birth_1[3:5] == '07' %}
+            <td>Jul {{ date_of_birth_1[:2] }}, {{ date_of_birth_1[6:]}}</td>
+            {% elif date_of_birth_1[3:5] == '08' %}
+            <td>Aug {{ date_of_birth_1[:2] }}, {{ date_of_birth_1[6:]}}</td>
+            {% elif date_of_birth_1[3:5] == '09' %}
+            <td>Sep {{ date_of_birth_1[:2] }}, {{ date_of_birth_1[6:]}}</td>
+            {% elif date_of_birth_1[3:5] == '10' %}
+            <td>Oct {{ date_of_birth_1[:2] }}, {{ date_of_birth_1[6:]}}</td>
+            {% elif date_of_birth_1[3:5] == '11' %}
+            <td>Nov {{ date_of_birth_1[:2] }}, {{ date_of_birth_1[6:]}}</td>
+            {% elif date_of_birth_1[3:5] == '12' %}
+            <td>Dec {{ date_of_birth_1[:2] }}, {{ date_of_birth_1[6:]}}</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>Place of Birth</th>
+            <td>{{ place_of_birth_1 }}</td>
+        </tr>
+        <tr>
+            <th>Sex</th>
+            {% if sex_1 == 's1' %}
+                <td>Male</td>
+            {% elif sex_1 == 's2' %}
+                <td>Female</td>
+            {% endif %}
+        </tr>
+            <tr>
+            <th>Pronoun</th>
+            {% if sex_1 == 's1' %}
+                <td>he</td>
+            {% elif sex_1 == 's2' %}
+                <td>she</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>Possessive Pronoun</th>
+            {% if sex_1 == 's1' %}
+                <td>his</td>
+            {% elif sex_1 == 's2' %}
+                <td>her</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>Wife/Husband</th>
+            {% if sex_1 == 's1' %}
+                <td>husband</td>
+            {% elif sex_1 == 's2' %}
+                <td>wife</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>Son/Daughter</th>
+            {% if sex_1 == 's1' %}
+                <td>son</td>
+            {% elif sex_1 == 's2' %}
+                <td>daughter</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>Marital Status Before Marriage</th>
+            {% if status_1 == 'st1'%}
+            <td>single</td>
+            {% elif status_1 == 'st2' %}
+            <td>divorced</td>
+            {% elif status_1 == 'st3' and sex_1 == 's1' %}
+            <td>widower</td>
+            {% else %}
+            <td>widowed</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>Mother</th>
+            <td>{{ parent_1_1 }}</td>
+        </tr>
+        <tr>
+            <th>Father</th>
+            <td>{{ parent_2_1 }}</td>
+        </tr>
+    </table>
+    </div>
+    <br/>
+    <div class="column-center">
+    <table border="1px">
+        <tr>
+            <th colspan="2">Spouse 2</th>
+        </tr>
+        <tr>
+            <th>Full Name</th>
+            <td>{{ full_name_2 }}</td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{ address_2 }}</td>
+        </tr>
+        <tr>
+            <th>Since</th>
+            {% if date_of_res_2[3:5] == '01' %}
+            <td>Jan {{ date_of_res_2[:2] }}, {{ date_of_res_2[6:]}}</td>
+            {% elif date_of_res_2[3:5] == '02' %}
+            <td>Feb {{ date_of_res_2[:2] }}, {{ date_of_res_2[6:]}}</td>
+            {% elif date_of_res_2[3:5] == '03' %}
+            <td>Mar {{ date_of_res_2[:2] }}, {{ date_of_res_2[6:]}}</td>
+            {% elif date_of_res_2[3:5] == '04' %}
+            <td>Apr {{ date_of_res_2[:2] }}, {{ date_of_res_2[6:]}}</td>
+            {% elif date_of_res_2[3:5] == '05' %}
+            <td>May {{ date_of_res_2[:2] }}, {{ date_of_res_2[6:]}}</td>
+            {% elif date_of_res_2[3:5] == '06' %}
+            <td>Jun {{ date_of_res_2[:2] }}, {{ date_of_res_2[6:]}}</td>
+            {% elif date_of_res_2[3:5] == '07' %}
+            <td>Jul {{ date_of_res_2[:2] }}, {{ date_of_res_2[6:]}}</td>
+            {% elif date_of_res_2[3:5] == '08' %}
+            <td>Aug {{ date_of_res_2[:2] }}, {{ date_of_res_2[6:]}}</td>
+            {% elif date_of_res_2[3:5] == '09' %}
+            <td>Sep {{ date_of_res_2[:2] }}, {{ date_of_res_2[6:]}}</td>
+            {% elif date_of_res_2[3:5] == '10' %}
+            <td>Oct {{ date_of_res_2[:2] }}, {{ date_of_res_2[6:]}}</td>
+            {% elif date_of_res_2[3:5] == '11' %}
+            <td>Nov {{ date_of_res_2[:2] }}, {{ date_of_res_2[6:]}}</td>
+            {% elif date_of_res_2[3:5] == '12' %}
+            <td>Dec {{ date_of_res_2[:2] }}, {{ date_of_res_2[6:]}}</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td>{{ age_2 }}</td>
+        </tr>
+                <tr>
+            <th>Date of Birth</th>
+            {% if date_of_birth_2[3:5] == '01' %}
+            <td>Jan {{ date_of_birth_2[:2] }}, {{ date_of_birth_2[6:] }}</td>
+            {% elif date_of_birth_2[3:5] == '02' %}
+            <td>Feb {{ date_of_birth_2[:2] }}, {{ date_of_birth_2[6:]}}</td>
+            {% elif date_of_birth_1[3:5] == '03' %}
+            <td>Mar {{ date_of_birth_2[:2] }}, {{ date_of_birth_2[6:]}}</td>
+            {% elif date_of_birth_2[3:5] == '04' %}
+            <td>Apr {{ date_of_birth_2[:2] }}, {{ date_of_birth_2[6:]}}</td>
+            {% elif date_of_birth_2[3:5] == '05' %}
+            <td>May {{ date_of_birth_2[:2] }}, {{ date_of_birth_2[6:]}}</td>
+            {% elif date_of_birth_2[3:5] == '06' %}
+            <td>Jun {{ date_of_birth_2[:2] }}, {{ date_of_birth_2[6:]}}</td>
+            {% elif date_of_birth_2[3:5] == '07' %}
+            <td>Jul {{ date_of_birth_2[:2] }}, {{ date_of_birth_2[6:]}}</td>
+            {% elif date_of_birth_2[3:5] == '08' %}
+            <td>Aug {{ date_of_birth_2[:2] }}, {{ date_of_birth_2[6:]}}</td>
+            {% elif date_of_birth_2[3:5] == '09' %}
+            <td>Sep {{ date_of_birth_2[:2] }}, {{ date_of_birth_2[6:]}}</td>
+            {% elif date_of_birth_2[3:5] == '10' %}
+            <td>Oct {{ date_of_birth_2[:2] }}, {{ date_of_birth_2[6:]}}</td>
+            {% elif date_of_birth_2[3:5] == '11' %}
+            <td>Nov {{ date_of_birth_2[:2] }}, {{ date_of_birth_2[6:]}}</td>
+            {% elif date_of_birth_2[3:5] == '12' %}
+            <td>Dec {{ date_of_birth_2[:2] }}, {{ date_of_birth_2[6:]}}</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>Place of Birth</th>
+            <td>{{ place_of_birth_2 }}</td>
+        </tr>
+        <tr>
+            <th>Sex</th>
+            {% if sex_2 == 's1' %}
+                <td>Male</td>
+            {% elif sex_2 == 's2' %}
+                <td>Female</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>Pronoun</th>
+            {% if sex_2 == 's1' %}
+                <td>he</td>
+            {% elif sex_2 == 's2' %}
+                <td>she</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>Possessive Pronoun</th>
+            {% if sex_2 == 's1' %}
+                <td>his</td>
+            {% elif sex_2 == 's2' %}
+                <td>her</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>Wife/Husband</th>
+            {% if sex_2 == 's1' %}
+                <td>husband</td>
+            {% elif sex_2 == 's2' %}
+                <td>wife</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>Son/Daughter</th>
+            {% if sex_2 == 's1' %}
+                <td>son</td>
+            {% elif sex_2 == 's2' %}
+                <td>daughter</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>Marital Status Before Marriage</th>
+            {% if status_2 == 'st1'%}
+            <td>single</td>
+            {% elif status_2 == 'st2' %}
+            <td>divorced</td>
+            {% elif status_2 == 'st3' and sex_2 == 's1' %}
+            <td>a widower</td>
+            {% else %}
+            <td>widowed</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th>Mother</th>
+            <td>{{ parent_1_2 }}</td>
+        </tr>
+        <tr>
+            <th>Father</th>
+            <td>{{ parent_2_2 }}</td>
+        </tr>
+    </table>
+    </div>
+    <br/>
+    <div class="column-right">
+    <table border="1px">
+        <tr>
+            <th>Marriage Date</th>
+            {% if marriage_date[3:5] == '01' %}
+            <td>Jan {{ marriage_date[:2] }}, {{ marriage_date[6:]}}</td>
+            {% elif marriage_date[3:5] == '02' %}
+            <td>Feb {{ marriage_date[:2] }}, {{ marriage_date[6:]}}</td>
+            {% elif marriage_date[3:5] == '03' %}
+            <td>Mar {{ marriage_date[:2] }}, {{ marriage_date[6:]}}</td>
+            {% elif marriage_date[3:5] == '04' %}
+            <td>Apr {{ marriage_date[:2] }}, {{ marriage_date[6:]}}</td>
+            {% elif marriage_date[3:5] == '05' %}
+            <td>May {{ marriage_date[:2] }}, {{ marriage_date[6:]}}</td>
+            {% elif marriage_date[3:5] == '06' %}
+            <td>Jun {{ marriage_date[:2] }}, {{ marriage_date[6:]}}</td>
+            {% elif marriage_date[3:5] == '07' %}
+            <td>Jul {{ marriage_date[:2] }}, {{ marriage_date[6:]}}</td>
+            {% elif marriage_date[3:5] == '08' %}
+            <td>Aug {{ marriage_date[:2] }}, {{ marriage_date[6:]}}</td>
+            {% elif marriage_date[3:5] == '09' %}
+            <td>Sep {{ marriage_date[:2] }}, {{ marriage_date[6:]}}</td>
+            {% elif marriage_date[3:5] == '10' %}
+            <td>Oct {{ marriage_date[:2] }}, {{ marriage_date[6:]}}</td>
+            {% elif marriage_date[3:5] == '11' %}
+            <td>Nov {{ marriage_date[:2] }}, {{ marriage_date[6:]}}</td>
+            {% elif marriage_date[3:5] == '12' %}
+            <td>Dec {{ marriage_date[:2] }}, {{ marriage_date[6:]}}</td>
+            {% endif %}
+        </tr>
+            <th>Marriage Location</th>
+            <td>{{ marriage_location }}</td>
+        </tr>
+        </tr>
+            <th>Attorney</th>
+            <td>{{ attorney }}</td>
+        </tr>
+    </table>
+    </div>
+    </div>
+{% endblock body %}
